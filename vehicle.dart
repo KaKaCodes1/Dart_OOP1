@@ -29,7 +29,7 @@ void populateList(List<String> carList){
   while (true) {
     print("Enter the name of the cars(Press Enter Key to finish)");
     String? input = stdin.readLineSync(); // Read input from the keyboard
-
+    //inputs if input is not null
     if(input != ""){
     carList.add(input!); // Add the input to the list of cars
     }
@@ -55,6 +55,7 @@ void main(){
 
   List<String>cars=[];
 
+  //calling methods for creating, populating and displaying the list
   populateList(cars);
 
   displayCarList(cars);
