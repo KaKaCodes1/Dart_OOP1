@@ -7,6 +7,7 @@ abstract class Vehicle{
   Vehicle(this.name, this.wheels);
 
   void display();
+  void displayTxt();
 }
 //inmplements Vehicle
 class Car implements Vehicle{
@@ -21,6 +22,13 @@ class Car implements Vehicle{
   void display(){
     print('Name: $name');
     print('Number of wheels: $wheels');
+  }
+
+  @override
+  void displayTxt(){
+    var contents= File('test.txt').readAsStringSync();
+    print("A message from our author!");
+    print(contents);
   }
 }
 void populateList(List<String> carList){
@@ -52,6 +60,7 @@ void main(){
   Car toyota = Car('toyota',4);
 
   toyota.display();
+  toyota.displayTxt();
 
   List<String>cars=[];
 
